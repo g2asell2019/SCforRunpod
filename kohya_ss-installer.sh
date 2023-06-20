@@ -62,6 +62,6 @@ python3.10 -m pip install --upgrade psutil
 echo "Kohya SS has been installed. To launch the app, close this window and open terminal then run accelerate config."
 echo "Accelerate config answers: this machine, no distributed training, NO, NO, NO, all, fp16."
 
-kohya_launcher.sh
+bash kohya_launcher.sh
 # Exit the script
 exit 0
