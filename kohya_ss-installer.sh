@@ -28,7 +28,7 @@ git clone https://github.com/bmaltais/kohya_ss.git
 # Install dependencies
 cd kohya_ss
 python3.10 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
-python3.10 -m pip install --use-pep517 --upgrade -r requirements.txt
+python3.10 -m pip install --use-pep517 --upgrade -r requirements_Ubuntu_20.04.txt
 python3.10 -m pip install xformers
 
 # Check if the system has an NVIDIA A5000 GPU
@@ -49,7 +49,7 @@ fi
 launcher_script="../kohya_launcher.sh"
 echo "#!/bin/bash" > $launcher_script
 echo "cd $(pwd)" >> $launcher_script
-echo "python3.10 kohya_gui.py" >> $launcher_script
+echo "python3.10 kohya_gui.py --share" >> $launcher_script
 chmod +x $launcher_script
 
 # Uninstall the system psutil package
