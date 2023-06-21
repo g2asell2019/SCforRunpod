@@ -49,7 +49,9 @@ fi
 launcher_script="../kohya_launcher.sh"
 echo "#!/bin/bash" > $launcher_script
 echo "cd $(pwd)" >> $launcher_script
-echo "export LD_LIBRARY_PATH=\$CONDA_PREFIX/lib/python3.10/site-packages/tensorrt_libs:\$CONDA_PREFIX/lib/:\$CUDNN_PATH/lib:\$LD_LIBRARY_PATH\nexport MKL_THREADING_LAYER=1\npython3.10 kohya_gui.py --share --headless" >> $launcher_script
+echo "export LD_LIBRARY_PATH=\$CONDA_PREFIX/lib/python3.10/site-packages/tensorrt_libs:\$CONDA_PREFIX/lib/:\$CUDNN_PATH/lib:\$LD_LIBRARY_PATH" >> $launcher_script
+echo "export MKL_THREADING_LAYER=1" >> $launcher_script
+echo "python3.10 kohya_gui.py --share --headless" >> $launcher_script
 chmod +x $launcher_script
 
 # Uninstall the system psutil package
