@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update the package repository
-sudo apt update
+apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 # Add deadsnakes PPA for installing Python 3.10
 sudo apt install -y software-properties-common
@@ -62,6 +62,6 @@ python3.10 -m pip install --upgrade psutil
 echo "Kohya SS has been installed. To launch the app, close this window and open terminal then run accelerate config."
 echo "Accelerate config answers: this machine, no distributed training, NO, NO, NO, all, fp16."
 
-bash kohya_launcher.sh
+accelerate config
 # Exit the script
 exit 0
