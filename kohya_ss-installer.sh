@@ -49,7 +49,7 @@ fi
 launcher_script="../kohya_launcher.sh"
 echo "#!/bin/bash" > $launcher_script
 echo "cd $(pwd)" >> $launcher_script
-echo "python3.10 kohya_gui.py --share" >> $launcher_script
+echo "python3.10 kohya_gui.py --share --headless" >> $launcher_script
 chmod +x $launcher_script
 
 # Uninstall the system psutil package
