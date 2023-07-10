@@ -28,7 +28,7 @@ git clone https://github.com/bmaltais/kohya_ss.git
 # Install dependencies
 cd kohya_ss
 python3.10 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
-python3.10 -m pip install --use-pep517 --upgrade -r requirements_Ubuntu_20.04.txt
+python3.10 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
 python3.10 -m pip install xformers
 
 # Check if the system has an NVIDIA A5000 GPU
@@ -64,6 +64,5 @@ python3.10 -m pip install --upgrade psutil
 echo "Kohya SS has been installed. To launch the app, close this window and open terminal then run accelerate config."
 echo "Accelerate config answers: this machine, no distributed training, NO, NO, NO, all, fp16."
 
-accelerate config
 # Exit the script
 exit 0
