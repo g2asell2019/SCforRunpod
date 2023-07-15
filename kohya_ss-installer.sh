@@ -27,6 +27,7 @@ git clone https://github.com/bmaltais/kohya_ss.git
 
 # Install dependencies
 cd kohya_ss
+pip3 install accelerate
 python3 -m pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 python3 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
 python3 -m pip install --use-pep517 --upgrade -r requirements.txt
