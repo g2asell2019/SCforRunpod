@@ -27,9 +27,9 @@ git clone https://github.com/bmaltais/kohya_ss.git
 
 # Install dependencies
 cd kohya_ss
-python3.10 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
-python3.10 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
-python3.10 -m pip install xformers
+python3 -m pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+python3 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
+python3 -m pip install xformers
 
 # Check if the system has an NVIDIA A5000 GPU
 if nvidia-smi --query-gpu=name --format=csv,noheader | grep -q "A5000"; then
