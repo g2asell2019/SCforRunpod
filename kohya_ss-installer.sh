@@ -33,6 +33,9 @@ python3 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
 python3 -m pip install --use-pep517 --upgrade -r requirements.txt
 python3 -m pip install xformers
 
+#add default accelerate config
+cp ./default_config.yaml /root/.cache/huggingface/accelerate/
+
 # Check if the system has an NVIDIA A5000 GPU
 if nvidia-smi --query-gpu=name --format=csv,noheader | grep -q "A5000"; then
   echo "NVIDIA A5000 GPU detected. Applying necessary fixes."
