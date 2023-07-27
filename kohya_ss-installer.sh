@@ -32,8 +32,10 @@ python3 -m pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-inde
 python3 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
 python3 -m pip install --use-pep517 --upgrade -r requirements.txt
 python3 -m pip install xformers
+pip install invisible-watermark==0.2.0
 
 #add default accelerate config
+mkdir /root/.cache/huggingface/accelerate/
 cp ./default_config.yaml /root/.cache/huggingface/accelerate/
 
 # Check if the system has an NVIDIA A5000 GPU
