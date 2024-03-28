@@ -59,7 +59,7 @@ echo "#!/bin/bash" > $launcher_script
 echo "cd $(pwd)" >> $launcher_script
 echo "export LD_LIBRARY_PATH=\$CONDA_PREFIX/lib/python3.10/site-packages/tensorrt_libs:\$CONDA_PREFIX/lib/:\$CUDNN_PATH/lib:\$LD_LIBRARY_PATH" >> $launcher_script
 echo "export MKL_THREADING_LAYER=1" >> $launcher_script
-echo "python3.10 kohya_gui.py --share --headless" >> $launcher_script
+echo "python3.10 kohya_gui.py --share --server_port 7860 --listen 0.0.0.0 --headless" >> $launcher_script
 chmod +x $launcher_script
 
 # Uninstall the system psutil package
