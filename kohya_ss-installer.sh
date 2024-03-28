@@ -28,10 +28,11 @@ git clone https://github.com/bmaltais/kohya_ss.git
 # Install dependencies
 cd kohya_ss
 pip3 install accelerate
-python3 -m pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+python3 -m pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 python3 -m pip install --use-pep517 --upgrade -r requirements_linux.txt
 python3 -m pip install --use-pep517 --upgrade -r requirements.txt
-python3 -m pip install xformers==0.0.21
+python3 -m pip install xformers==0.0.23.post1+cu118
+python3 -m pip install rich 
 pip install invisible-watermark==0.2.0
 
 #add default accelerate config
